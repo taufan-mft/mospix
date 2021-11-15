@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mospix/routes/schedules/add/index.dart';
 import 'package:mospix/routes/schedules/components/card_item/index.dart';
 
 class SchedulesView extends StatefulWidget {
@@ -15,9 +17,12 @@ class _SchedulesViewState extends State<SchedulesView> {
         backgroundColor: Colors.white,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Add your onPressed code here!
+            Navigator.push(
+              context,
+              CupertinoPageRoute(builder: (context) => AddSchedulesView()),
+            );
           },
-          child: const Icon(Icons.navigation),
+          child: const Icon(Icons.add),
           backgroundColor: Colors.green,
         ),
         appBar: AppBar(
